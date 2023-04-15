@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/stats_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/game_tile_2048"
+            android:gravity="center"
+            android:text="@string/game_title"
+            android:textColor="#FBFAF5"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#3C3A35"
+                    android:gravity="center"
+                    android:text="@string/game_score_pattern"
+                    android:textColor="#FBFAF5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_best_score"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#3C3A35"
+                    android:gravity="center"
+                    android:text="@string/game_best_score_pattern"
+                    android:textColor="#FBFAF5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent">
+
+                <Button
+                    android:id="@+id/btn_new_game"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#E8583A"
+                    android:text="@string/game_btn_new_text"
+                    android:textColor="#FBFAF5"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_undo_move"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#E8583A"
+                    android:text="@string/game_btn_undo_text"
+                    android:textColor="#FBFAF5"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <nikita.miller.game2048.SquareTableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:background="#AD9C81"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stats_panel">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/game_tile_00"
+                style="@style/GameTileEmpty"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/game_tile_01"
+                style="@style/GameTile2"
+                android:text="@string/game_tile_2" />
+
+            <TextView
+                android:id="@+id/game_tile_02"
+                style="@style/GameTile4"
+                android:text="@string/game_tile_4" />
+
+            <TextView
+                android:id="@+id/game_tile_03"
+                style="@style/GameTile8"
+                android:text="@string/game_tile_8" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/game_tile_10"
+                style="@style/GameTile16"
+                android:text="@string/game_tile_16" />
+
+            <TextView
+                android:id="@+id/game_tile_11"
+                style="@style/GameTile32"
+                android:text="@string/game_tile_32" />
+
+            <TextView
+                android:id="@+id/game_tile_12"
+                style="@style/GameTile64"
+                android:text="@string/game_tile_64" />
+
+            <TextView
+                android:id="@+id/game_tile_13"
+                style="@style/GameTile128"
+                android:text="@string/game_tile_128" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/game_tile_20"
+                style="@style/GameTile128"
+                android:text="@string/game_tile_256" />
+
+            <TextView
+                android:id="@+id/game_tile_21"
+                style="@style/GameTile512"
+                android:text="@string/game_tile_512" />
+
+            <TextView
+                android:id="@+id/game_tile_22"
+                style="@style/GameTile1024"
+                android:text="@string/game_tile_1024" />
+
+            <TextView
+                android:id="@+id/game_tile_23"
+                style="@style/GameTile2048"
+                android:text="@string/game_tile_2048" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/game_tile_30"
+                style="@style/GameTile4096"
+                android:text="@string/game_tile_4096" />
+
+            <TextView
+                android:id="@+id/game_tile_31"
+                style="@style/GameTile8192"
+                android:text="@string/game_tile_8192" />
+
+            <TextView
+                android:id="@+id/game_tile_32"
+                style="@style/GameTileEmpty"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/game_tile_33"
+                style="@style/GameTileEmpty"
+                android:text="" />
+
+        </TableRow>
+
+    </nikita.miller.game2048.SquareTableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

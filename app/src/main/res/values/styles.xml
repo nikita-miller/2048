@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="GameTile" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="GameTileEmpty" parent="GameTile">
+        <item name="android:background">@color/game_tile_empty</item>
+        <item name="android:textColor">@color/game_tile_empty</item>
+    </style>
+
+    <style name="GameTile2" parent="GameTile">
+        <item name="android:background">@color/game_tile_2</item>
+        <item name="android:textColor">@color/game_text_color_dark</item>
+    </style>
+
+    <style name="GameTile4" parent="GameTile">
+        <item name="android:background">@color/game_tile_4</item>
+        <item name="android:textColor">@color/game_text_color_dark</item>
+    </style>
+
+    <style name="GameTile8" parent="GameTile">
+        <item name="android:background">@color/game_tile_8</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile16" parent="GameTile">
+        <item name="android:background">@color/game_tile_16</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile32" parent="GameTile">
+        <item name="android:background">@color/game_tile_32</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile64" parent="GameTile">
+        <item name="android:background">@color/game_tile_64</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile128" parent="GameTile">
+        <item name="android:background">@color/game_tile_128</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile256" parent="GameTile">
+        <item name="android:background">@color/game_tile_256</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile512" parent="GameTile">
+        <item name="android:background">@color/game_tile_512</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+    </style>
+
+    <style name="GameTile1024" parent="GameTile">
+        <item name="android:background">@color/game_tile_1024</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GameTile2048" parent="GameTile">
+        <item name="android:background">@color/game_tile_2048</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GameTile4096" parent="GameTile">
+        <item name="android:background">@color/game_tile_other</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GameTile8192" parent="GameTile">
+        <item name="android:background">@color/game_tile_other</item>
+        <item name="android:textColor">@color/game_text_color_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>
